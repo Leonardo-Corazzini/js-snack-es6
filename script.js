@@ -26,3 +26,37 @@ for (let i = 0; i < bikes.length; i++) {
     }
     
 }
+// Snack 2
+// Creare un array di oggetti di squadre di calcio.
+//  Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+// Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
+// Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+console.log('snack 2')
+const team1 = {
+    nome: 'Juventus',
+    'punti-fatti': 0,
+    'falli-subiti': 0
+}
+const team2 = {
+    nome: 'Inter',
+    'punti-fatti': 0,
+    'falli-subiti': 0
+}
+const team3 = {
+    nome: 'Milan',
+    'punti-fatti': 0,
+    'falli-subiti': 0
+}
+const serieA = [team1,team2,team3]
+const newSerieA = []
+for (let j = 0; j < serieA.length; j++) {
+   
+    serieA[j]['punti-fatti'] = Math.floor(Math.random() * 100) + 1
+    serieA[j]['falli-subiti'] = Math.floor(Math.random() * 100) + 1
+    console.log(serieA[j])
+    delete serieA[j]['punti-fatti']
+    newSerieA.push(serieA[j])
+    
+}
+console.log(newSerieA)
